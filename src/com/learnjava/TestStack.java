@@ -1,8 +1,9 @@
 package com.learnjava;
 
 class Stack {
-    int[] stack = new int[10];
-    int tos;
+    private int[] stack = new int[10];
+
+    private int tos;
 
     Stack() {
         tos = -1;
