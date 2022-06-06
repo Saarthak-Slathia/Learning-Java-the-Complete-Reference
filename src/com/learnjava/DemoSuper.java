@@ -1,9 +1,9 @@
 package com.learnjava;
 
 class Box7{
-    private double width;
-    private double height;
-    private double depth;
+    private final double width;
+    private final double height;
+    private final double depth;
 
     // Construct clone of an object
     Box7(Box7 ob){
