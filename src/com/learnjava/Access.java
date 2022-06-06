@@ -17,7 +17,7 @@ class B1 extends A1{
     int total;
 
     void sum(){
-        total = i + j; // Error! j is not known here
+//        total = i + j; // Error! j is not known here
     }
 }
 
