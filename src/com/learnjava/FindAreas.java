@@ -1,6 +1,6 @@
 package com.learnjava;
 
-class Figure{
+abstract class Figure{
     double dim1;
     double dim2;
 
@@ -9,10 +9,7 @@ class Figure{
         dim2 = b;
     }
 
-    double area(){
-        System.out.println("Area for figure is undefined");
-        return 0;
-    }
+    abstract double area();
 }
 
 class Rectangle extends Figure{
@@ -41,19 +38,16 @@ class Triangle extends Figure{
 
 public class FindAreas {
     public static void main(String[] args) {
-        Figure f = new Figure(10,10);
+//        Figure f = new Figure(10,10); // Illegal Now!
         Rectangle r = new Rectangle(9, 5);
         Triangle t = new Triangle(10, 8);
 
-        Figure figRef;
+        Figure figRef; // This is ok as no object is created
 
         figRef = r;
         System.out.println("Area is " + figRef.area());
 
         figRef = t;
-        System.out.println("Area is " + figRef.area());
-
-        figRef = f;
         System.out.println("Area is " + figRef.area());
     }
 }
